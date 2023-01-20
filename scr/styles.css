@@ -1,0 +1,133 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --board-size : 480px
+    
+}
+
+body {
+    background-color: #333;
+    width: 100vw;
+    height: 100vh;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-boards {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+#turn-ui {
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 3px solid white;
+    border-radius: 15px;
+}
+
+.side{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.side:is(.turn) {
+    pointer-events: none;
+    filter: blur(2px);
+}
+
+.title{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.5rem; 
+    color: white;
+}
+
+.title p {
+    padding: 5px;
+    letter-spacing: 5px ;
+}
+
+.board{
+    width: var(--board-size);
+    height: var(--board-size);
+    border: solid 3px white;
+    margin: 5px;
+    box-sizing: content-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.cell {
+    width: calc(var(--board-size) / 10);
+    height: calc(var(--board-size) / 10);
+    background-color: rgba(0, 0, 0, 0.1);
+    border-style: dotted;
+    cursor: crosshair;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.BoatUi {
+    width: 100%;
+    height: 50px;
+    border: 3px dashed white ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.boat {
+    background-color: #5f9ea0;
+}
+
+.ui-boat-status{
+    color: white;
+}
+
+#hit{
+    content: url("./img/icons8-close.svg");
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    color: rgb(230, 54, 39);
+    cursor: not-allowed;
+}
+
+#miss{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    color: white;
+    content: url("./img/icons8-cancel.svg");
+    cursor: not-allowed;
+}
+
+/* button:has(span){
+    cursor: none;
+} */
