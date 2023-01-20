@@ -1,4 +1,4 @@
-import { alternate } from "./index.js";
+import { alternate } from "/home/bynooz/the_odin_project/practice/BattleShip/BattleShip/scr/index.js";
 const playerSide = document.querySelector("playerBoard");
 
 const x = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
